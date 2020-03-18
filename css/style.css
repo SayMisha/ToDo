@@ -1,0 +1,113 @@
+.modal.overlay {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    z-index: -555;
+    transition: opacity 0.5s;
+}
+.modal.overlay.open {
+    opacity: 1;
+    z-index: 555;
+}
+
+
+
+
+.modal-window {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    height: 300px;
+    margin-top: 170px;
+    flex-wrap: wrap;
+}
+.modal-window div {
+    width: 100%;
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 34px;
+    margin-top: 20px;
+}
+
+#title-todo {
+    border: 1px solid #49c7ff;
+    padding: 4px 10px;
+    text-align: center;
+}
+.todo-container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 20px 0;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.todo-list {
+    width: 27%;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(49, 143, 255, 0.3);
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding: 7px 7px;
+    transition: box-shadow 0.5s;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+ul {
+    padding: 0;
+}
+
+.todo-list:hover {
+    box-shadow: 0 0 15px rgba(49, 143, 255, 0.7);
+}
+
+.todo-list p {
+    border-bottom: 1px solid rgba(32, 87, 255, 0.3);
+}
+
+.todo-item {
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    padding: 4px 4px;
+    box-shadow: 0 0 1px rgba(49, 143, 255, 0.9);
+    transition: background-color 0.3s;
+    position: relative;
+    padding-right: 10px;
+}
+
+.todo-item:hover {
+    background-color: rgba(49, 143, 255, 0.3);
+    cursor: pointer;
+}
+
+[data-button="delete"] {
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+[data-button="delete"]:active {
+    background-color: rgba(30, 144, 255, 0.78);
+}
+.todo-item:active {
+    background-color: rgba(30, 144, 255, 0.5);
+}
